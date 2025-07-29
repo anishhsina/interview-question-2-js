@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Day 2 - Interview Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+
+<header>
+  JavaScript Day 2 – Interview Prep Notes
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>1. What are Objects in JavaScript?</h2>
+    <p>Objects store multiple values as key-value pairs.</p>
+    <pre>
+const person = {
+  name: "Anish",
+  age: 23,
+  isStudent: true
+};</pre>
+  </div>
+
+  <div class="card">
+    <h2>2. What are Functions?</h2>
+    <p>Reusable blocks of code used to perform specific tasks.</p>
+    <pre>
+function greet(name) {
+  return "Hello " + name;
+}</pre>
+  </div>
+
+  <div class="card">
+    <h2>3. What is an Event Loop and Call Stack?</h2>
+    <p>
+      <strong>Call Stack:</strong> Manages function execution.<br>
+      <strong>Event Loop:</strong> Moves async tasks from queue to stack when stack is empty.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>4. What is the DOM?</h2>
+    <p>The DOM is a tree representation of HTML elements as JavaScript objects.</p>
+    <pre>document.getElementById("title").innerText = "Welcome";</pre>
+  </div>
+
+  <div class="card">
+    <h2>5. undefined vs not defined vs NaN</h2>
+    <table>
+      <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>undefined</td><td>Declared but no value assigned</td></tr>
+        <tr><td>not defined</td><td>Variable not declared</td></tr>
+        <tr><td>NaN</td><td>Invalid math result (Not a Number)</td></tr>
+      </tbody>
+    </table>
+    <pre>
+let a;
+console.log(a);       // undefined
+console.log(b);       // ReferenceError
+console.log(0 / "a"); // NaN</pre>
+  </div>
+
+  <div class="card">
+    <h2>6. What are Arrow Functions?</h2>
+    <p>Compact syntax for writing functions in ES6.</p>
+    <pre>const add = (a, b) => a + b;</pre>
+  </div>
+
+  <div class="card">
+    <h2>7. for-in Loop</h2>
+    <p>Used to loop through object properties.</p>
+    <pre>
+const user = { name: "Anish", age: 23 };
+for (let key in user) {
+  console.log(key + ": " + user[key]);
+}</pre>
+  </div>
+
+  <div class="card">
+    <h2>8. Scope Types</h2>
+    <table>
+      <thead><tr><th>Scope</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Local</td><td>Inside a function</td></tr>
+        <tr><td>Block</td><td>Inside curly braces `{}`</td></tr>
+        <tr><td>Function</td><td>Specific to function when using `var`</td></tr>
+        <tr><td>Scope Chain</td><td>Looks up outer scopes if not found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>9. null vs undefined</h2>
+    <table>
+      <thead><tr><th>Feature</th><th>null</th><th>undefined</th></tr></thead>
+      <tbody>
+        <tr><td>Type</td><td>object</td><td>undefined</td></tr>
+        <tr><td>Use</td><td>Manual empty value</td><td>Variable declared but not assigned</td></tr>
+        <tr><td>Example</td><td>let a = null;</td><td>let a;</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>10. map() and filter()</h2>
+    <pre>
+const nums = [1, 2, 3, 4];
+const doubled = nums.map(n => n * 2); // [2, 4, 6, 8]
+const evens = nums.filter(n => n % 2 === 0); // [2, 4]</pre>
+  </div>
+
+  <div class="card">
+    <h2>11. Count 0's in Array</h2>
+    <pre>
+const arr = [1, 0, 1, 0, 0];
+const zeros = arr.filter(n => n === 0).length;
+console.log("0s:", zeros);</pre>
+  </div>
+
+  <div class="card">
+    <h2>12. Count Odd & Even Numbers</h2>
+    <pre>
+const nums = [1, 2, 3, 4, 5, 6];
+let odd = 0, even = 0;
+nums.forEach(n => n % 2 === 0 ? even++ : odd++);
+console.log("Even:", even, "Odd:", odd);</pre>
+  </div>
+
+  <div class="card">
+    <h2>13. Count Vowels in String</h2>
+    <pre>
+const str = "hello world";
+const vowels = str.match(/[aeiou]/gi);
+console.log("Vowels:", vowels ? vowels.length : 0);</pre>
+  </div>
+
+</div>
+
+</body>
+</html>
